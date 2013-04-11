@@ -1,0 +1,254 @@
+@CHARSET "UTF-8";
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav li {
+	float: left;
+}
+
+nav a:link, header a:visited {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+/* Header Styles */
+
+body > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #f6f6f6;
+    color: #00000;
+	font-weight: bold;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+header li:hover {
+	 background-color: #eee;
+	 color: #000;
+}
+
+header > nav {
+	height: 30px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+#header-main-nav li {
+	padding: 5px 10px;
+	line-height: 20px;
+	border-right: 1px solid #d9d9d9;
+}
+
+#header-logo, #header-logo > img {
+	border: none;
+	padding: none;
+	margin: none;
+	height: 30px;
+}
+
+#header-info {
+	height: 45px;
+	border-bottom: 1px solid #d9d9d9;
+	background: white;
+}
+
+#header-info a:link, header a:visited {
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#header-kpi ul {
+	list-style: none;
+}
+
+#header-kpi li {
+	padding: 5px 10px;
+	text-align: center;
+	float: left;
+}
+
+.kpi-bulb {
+    position: relative;
+    margin: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: lightblue;
+    border: 1px solid lightgrey;
+    display: block;
+}
+
+.green-bulb {
+	background: lightgreen;
+}
+
+.red-bulb {
+	background: red;
+}
+
+#header-logo, #header-apollopedia, #header-helpdesk {
+	float: right;
+}
+
+#header-apollopedia {
+	padding: 10px 10px;
+}
+
+#header-helpdesk {
+	padding: 5px 10px;
+	line-height: 35px;
+}
+
+
+
+/* Main Content Styles */
+
+#Content {
+    position: absolute;
+    top: 80px;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    z-index: 10;
+}
+
+.Panel {
+	float: left;
+}
+
+.SidePanel {
+	position: absolute;
+	top: 80px;
+	bottom: 32px;
+	right: 0;
+	width: 400px;
+	z-index: 20;
+	display: none;
+	border: 1px solid #d9d9d9;
+	background: #fff;
+}
+
+.SidePanel header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.SidePanel section {
+	position: absolute;
+	top: 31px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+a.Trigger {
+	position: absolute;
+	text-decoration: none;
+	top: 150px; 
+	right: 0;
+	padding: 5px;
+	font-weight: bold;
+	background: yellow;
+	border: 1px double black;
+	border-right: 0;
+	display: block;
+	z-index: 30;
+}
+
+article {
+	margin: 2px;
+	border: 1px solid #d9d9d9;
+	background: #fff;
+}
+
+article > nav {
+	float: right;
+}
+
+article > nav ul {
+	list-style: none;
+}
+
+article > nav li {
+	margin: 4px;
+	padding: 5px;
+	font-size: 11px;
+	background: yellow;
+	border: 1px solid black;
+}
+
+article > header {
+	padding: 5px 10px;
+	font-size: 20px;
+	font-weight: bold;
+	background: #f6f6f6;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+article > section {
+	margin: 5px 10px;
+}
+
+article p {
+	margin: 10px 0;
+}
+
+.half {
+	width: 50%;
+}
+
+.full {
+	width: 100%	
+}
+
+.FourColumns {
+	width: 100%;
+}
+
+.LabelColumn {
+	font-weight: bold;
+	white-space: nowrap;
+	text-align: right;
+	padding: 1px 10px;
+}
+
+.FourColumns .ContentColumn {
+	width: 25%;
+}
+
+.ClearBoth {
+	clear: both;
+}
+
+/* Footer Styles */
+
+body > footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f6f6f6;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 11px;
+	padding: 5px 10px;
+	line-height: 20px;
+	border-top: 2px solid #d9d9d9;
+	text-align: right;
+}
