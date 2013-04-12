@@ -112,6 +112,61 @@ header > nav {
 	line-height: 35px;
 }
 
+/* SidePanel Styles */
+
+.SidePanel {
+	position: absolute;
+	top: 80px;
+	bottom: 32px;
+	right: 0;
+	width: 400px;
+	z-index: 20;
+	display: none;
+	border: 1px solid #d9d9d9;
+	background: #fff;
+}
+
+.SidePanel article {
+	margin: 0;
+	border: 0;
+}
+
+.SidePanel header {
+	position: absolute;
+	z-index: 21;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.SidePanel nav {
+	z-index: 22;
+	position: relative;
+}
+.SidePanel section {
+	position: absolute;
+	top: 31px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 4px;
+	overflow: auto;
+}
+
+a.Trigger {
+	position: absolute;
+	text-decoration: none;
+	top: 150px; 
+	right: 0;
+	padding: 5px;
+	font-weight: bold;
+	background: yellow;
+	border: 1px double black;
+	border-right: 0;
+	display: block;
+	z-index: 30;
+}
 
 
 /* Main Content Styles */
@@ -128,48 +183,6 @@ header > nav {
 
 .Panel {
 	float: left;
-}
-
-.SidePanel {
-	position: absolute;
-	top: 80px;
-	bottom: 32px;
-	right: 0;
-	width: 400px;
-	z-index: 20;
-	display: none;
-	border: 1px solid #d9d9d9;
-	background: #fff;
-}
-
-.SidePanel header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-}
-
-.SidePanel section {
-	position: absolute;
-	top: 31px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	overflow: auto;
-}
-
-a.Trigger {
-	position: absolute;
-	text-decoration: none;
-	top: 150px; 
-	right: 0;
-	padding: 5px;
-	font-weight: bold;
-	background: yellow;
-	border: 1px double black;
-	border-right: 0;
-	display: block;
-	z-index: 30;
 }
 
 article {

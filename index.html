@@ -114,7 +114,7 @@
 				</section>
 			</article>
 		</div>
-		<div class="Panel half">
+		<div class="Panel AjaxPanel half" data-ajax_source="AjaxContent.php">
 			<article>
 				<nav>
 					<ul>
@@ -123,11 +123,6 @@
 				</nav>
 				<header>Right Panel</header>
 				<section>
-					<p>Proin ut lacus non quam faucibus lobortis id sit amet diam. Phasellus blandit laoreet libero in gravida. Fusce semper rhoncus tortor id tincidunt. Phasellus congue ultrices lacus, ut ultricies augue eleifend eget. Proin volutpat lectus sed mi dapibus vel blandit nunc euismod. Vestibulum pulvinar accumsan malesuada. Quisque blandit pellentesque sagittis. Vivamus sed justo quam, vitae vehicula urna. Nunc rhoncus aliquet eros ac dapibus.</p>
-					<p>Integer malesuada lacus in mi vulputate nec scelerisque nibh posuere. Curabitur velit purus, fringilla ut commodo nec, laoreet et est. Quisque massa purus, eleifend eget pretium vitae, vehicula quis quam. Nulla elementum, ipsum id aliquet ullamcorper, lorem lorem aliquam purus, aliquam venenatis massa elit et nisi. Etiam commodo diam in sem ultrices in mattis magna scelerisque. Phasellus sed ligula eget ligula posuere vulputate. Aliquam erat volutpat. Mauris sit amet egestas libero. Donec in egestas massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at elit dui, ac egestas nisi. Sed ornare ante libero, in bibendum velit. Maecenas consectetur odio at libero pulvinar nec lacinia ante suscipit. Ut elementum, eros sed eleifend convallis, purus neque vulputate sem, vestibulum egestas enim dui eget nisi. Nam pulvinar, neque et consectetur malesuada, eros est aliquam eros, a iaculis lorem urna a metus. Donec sem tortor, laoreet non viverra id, feugiat et ipsum.</p>
-					<p>Aliquam in diam sapien. Sed elit turpis, blandit at convallis et, consectetur molestie neque. Sed porta porttitor ligula sit amet tempus. Morbi feugiat pellentesque enim elementum tristique. Nam rhoncus ipsum et velit laoreet a iaculis dui commodo. Quisque eu magna lectus. In massa metus, aliquet vitae venenatis eu, volutpat venenatis purus. Nullam tortor sapien, cursus nec facilisis vel, blandit eu augue. Morbi eleifend, tellus vel posuere porttitor, mi ipsum pulvinar elit, sit amet rutrum enim metus a lorem.</p>
-					<p>Morbi luctus odio vitae lorem interdum eu scelerisque diam sagittis. Nulla fringilla, nibh ut euismod vehicula, augue justo pellentesque orci, sit amet aliquam ante lorem sed risus. Proin pretium interdum diam eu tristique. Nullam lobortis, mi ac rhoncus tristique, ante neque vehicula turpis, quis rhoncus quam nisl sed ipsum. Aliquam metus urna, luctus ut pulvinar vel, facilisis ut ipsum. Ut suscipit porttitor tortor, at malesuada velit congue nec. Sed faucibus, nisi quis commodo fermentum, nunc sapien pulvinar ante, id lobortis metus turpis pretium velit.</p>
-					<p>Fusce pretium lorem non urna ultricies ac egestas sapien pulvinar. Vivamus augue turpis, mollis quis commodo sit amet, pellentesque in ipsum. Integer nec mi pellentesque ante rutrum auctor in vel elit. Vestibulum eget diam sed tellus sagittis porta. Donec eget nisi nisl, accumsan ullamcorper tortor. Curabitur ac semper tortor. Phasellus eu sapien dolor. Phasellus elementum fermentum semper. Etiam sollicitudin volutpat nibh, et scelerisque lorem consequat ut.</p>
 				</section>
 			</article>
 		</div>
@@ -149,27 +144,22 @@
 			</article>
 		</div>
 	</div>
-	<a href="#" class="Trigger" data-target="#ContactCommentary" data-alt="Hide »">« Show</a>
-	<div id="ContactCommentary" class="SidePanel Closed">
+	<a href="#" class="Trigger" data-target="#ContactCommentary" title="Show Contact Commentary" data-alt="»">«</a>
+	<div id="ContactCommentary" class="SidePanel AjaxPanel Closed" data-ajax_source="AjaxContent.php">
 			<article>
+				<nav>
+					<ul></ul>
+				</nav>
 				<header>Side Panel</header>
 				<section>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit metus sed eros ullamcorper sit amet consectetur risus tincidunt. Fusce mi felis, vestibulum sit amet posuere ac, auctor vel ipsum. Suspendisse semper lorem at ipsum volutpat ac volutpat lectus porta. Nullam egestas ornare orci. Maecenas euismod venenatis arcu, non tempus augue tristique at. Nullam consequat sapien at diam lacinia ultrices. Proin rhoncus ante et sapien auctor id feugiat risus scelerisque. Nunc nec porta arcu. Donec mattis urna nec felis placerat eget dignissim nulla auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-					<p>Donec elementum justo sed lectus blandit eu tristique sapien tempor. Aliquam felis ligula, luctus sit amet vestibulum a, viverra ac velit. Sed sagittis, arcu sed ullamcorper volutpat, orci velit lacinia nibh, vel ornare erat tortor luctus nisl. Suspendisse sit amet purus libero. Morbi sed auctor ipsum. Nunc id condimentum urna. Pellentesque non dolor leo, nec ultricies elit. Integer sit amet turpis a tellus porttitor imperdiet.</p>
-					<p>Sed massa lacus, ultrices vitae aliquet et, tincidunt nec tellus. Nullam fermentum volutpat purus, vel vehicula eros tempor in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin varius augue id leo adipiscing ac dignissim ipsum aliquam. Proin semper feugiat ipsum. Aliquam vitae felis augue. Etiam elementum elit ut lectus mollis dapibus.</p>
-					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent eros urna, posuere eu mollis eu, interdum eu leo. Maecenas dapibus congue arcu ac viverra. Nam lectus elit, laoreet ac luctus vel, volutpat vitae sapien. Phasellus interdum felis venenatis lacus eleifend interdum. Aenean eget nunc eget dui interdum dapibus vel eget tortor. Nulla facilisi. Maecenas molestie, mauris et tempus suscipit, neque massa viverra lacus, eu consequat mi eros ut velit. Sed lectus velit, pulvinar at lacinia pretium, congue non nunc. Maecenas sit amet molestie tellus. Cras adipiscing pretium leo. Etiam cursus elit elit. Morbi eget neque in tellus sollicitudin semper sit amet a urna.</p>
-					<p>Donec rutrum vehicula dolor, egestas sagittis lorem condimentum ut. Vivamus nec dui velit. Vivamus convallis arcu vitae tellus lobortis faucibus. Suspendisse potenti. Nunc vel metus mi. Morbi et mi eu purus congue bibendum. Maecenas non mollis arcu. Nunc nec lacus sit amet dui porttitor condimentum et id est. Aenean vel aliquet turpis. Ut eu quam ipsum, eget fringilla sem. Vestibulum viverra malesuada facilisis. Donec facilisis, enim non tempor suscipit, lorem enim rutrum ipsum, vel dignissim metus elit id metus. Donec sollicitudin aliquam ipsum quis tempus. Donec elit purus, tristique nec suscipit at, congue id odio. Aenean magna orci, hendrerit vel hendrerit vitae, iaculis sed felis. Pellentesque ut diam elit.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In blandit metus sed eros ullamcorper sit amet consectetur risus tincidunt. Fusce mi felis, vestibulum sit amet posuere ac, auctor vel ipsum. Suspendisse semper lorem at ipsum volutpat ac volutpat lectus porta. Nullam egestas ornare orci. Maecenas euismod venenatis arcu, non tempus augue tristique at. Nullam consequat sapien at diam lacinia ultrices. Proin rhoncus ante et sapien auctor id feugiat risus scelerisque. Nunc nec porta arcu. Donec mattis urna nec felis placerat eget dignissim nulla auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-					<p>Donec elementum justo sed lectus blandit eu tristique sapien tempor. Aliquam felis ligula, luctus sit amet vestibulum a, viverra ac velit. Sed sagittis, arcu sed ullamcorper volutpat, orci velit lacinia nibh, vel ornare erat tortor luctus nisl. Suspendisse sit amet purus libero. Morbi sed auctor ipsum. Nunc id condimentum urna. Pellentesque non dolor leo, nec ultricies elit. Integer sit amet turpis a tellus porttitor imperdiet.</p>
-					<p>Sed massa lacus, ultrices vitae aliquet et, tincidunt nec tellus. Nullam fermentum volutpat purus, vel vehicula eros tempor in. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin varius augue id leo adipiscing ac dignissim ipsum aliquam. Proin semper feugiat ipsum. Aliquam vitae felis augue. Etiam elementum elit ut lectus mollis dapibus.</p>
-					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent eros urna, posuere eu mollis eu, interdum eu leo. Maecenas dapibus congue arcu ac viverra. Nam lectus elit, laoreet ac luctus vel, volutpat vitae sapien. Phasellus interdum felis venenatis lacus eleifend interdum. Aenean eget nunc eget dui interdum dapibus vel eget tortor. Nulla facilisi. Maecenas molestie, mauris et tempus suscipit, neque massa viverra lacus, eu consequat mi eros ut velit. Sed lectus velit, pulvinar at lacinia pretium, congue non nunc. Maecenas sit amet molestie tellus. Cras adipiscing pretium leo. Etiam cursus elit elit. Morbi eget neque in tellus sollicitudin semper sit amet a urna.</p>
-					<p>Donec rutrum vehicula dolor, egestas sagittis lorem condimentum ut. Vivamus nec dui velit. Vivamus convallis arcu vitae tellus lobortis faucibus. Suspendisse potenti. Nunc vel metus mi. Morbi et mi eu purus congue bibendum. Maecenas non mollis arcu. Nunc nec lacus sit amet dui porttitor condimentum et id est. Aenean vel aliquet turpis. Ut eu quam ipsum, eget fringilla sem. Vestibulum viverra malesuada facilisis. Donec facilisis, enim non tempor suscipit, lorem enim rutrum ipsum, vel dignissim metus elit id metus. Donec sollicitudin aliquam ipsum quis tempus. Donec elit purus, tristique nec suscipit at, congue id odio. Aenean magna orci, hendrerit vel hendrerit vitae, iaculis sed felis. Pellentesque ut diam elit.</p>
 				</section>
 			</article>
 		</div>
 	<footer>Some Unused Footer Type Thing</footer>
 	<script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.endless-scroll.1.6.0.js"></script>
+	<script type="text/javascript" src="js/sthree.panel.js"></script>
+	<script type="text/javascript" src="js/sthree.ajaxpanel.js"></script>
 	<script type="text/javascript" src="js/sthree.sidepanel.js"></script>
 </body>
 </html>

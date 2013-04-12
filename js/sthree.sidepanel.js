@@ -35,7 +35,7 @@ var fGetContent = function() {
 $( function() {
 	$(document).on( 'click.Trigger', '.Trigger', fDoSlideOut );
 	$('#ContactCommentary section').endlessScroll( { fireOnce: true
-        								   , insertAfter: "#ContactCommentary section p:last"
+        								   , insertAfter: "#ContactCommentary section > :last"
         								   , content: fGetContent
         								   , intervalFrequency: 5
       									   }
