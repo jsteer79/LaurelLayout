@@ -5,6 +5,7 @@
 	<title>Laurel Layout</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="css/sthree.sidepanel.css" media="all" />
 	<script type="text/javascript" src="js/modernizr.2.6.2.min.js"></script>
 </head>
 <body>
@@ -144,22 +145,32 @@
 			</article>
 		</div>
 	</div>
-	<a href="#" class="Trigger" data-target="#ContactCommentary" title="Show Contact Commentary" data-alt="»">«</a>
-	<div id="ContactCommentary" class="SidePanel AjaxPanel Closed" data-ajax_source="AjaxContent.php">
-			<article>
-				<nav>
-					<ul></ul>
-				</nav>
-				<header>Side Panel</header>
-				<section>
-				</section>
-			</article>
-		</div>
+	<div id="ContactCommentary" class="SidePanel SidePanelRight AjaxPanel Closed" data-ajax_source="AjaxContent.php" data-title_show="Show Contact Commentary" data-title_hide="Hide Contact Commentary">
+		<article>
+			<nav>
+				<ul></ul>
+			</nav>
+			<header>Contact Commentary</header>
+			<section>
+			</section>
+		</article>
+	</div>
+	<div id="Codes" class="SidePanel SidePanelLeft AjaxPanel Closed" data-ajax_source="AjaxContent.php" data-title_show="Show Codes" data-title_hide="Hide Codes">
+		<article>
+			<nav>
+				<ul></ul>
+			</nav>
+			<header>Codes</header>
+			<section>
+			</section>
+		</article>
+	</div>
 	<footer>Some Unused Footer Type Thing</footer>
 	<script type="text/javascript" src="js/jquery.1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.endless-scroll.1.6.0.js"></script>
 	<script type="text/javascript" src="js/sthree.panel.js"></script>
 	<script type="text/javascript" src="js/sthree.ajaxpanel.js"></script>
+	<script type="text/javascript" src="js/sthree.endlessscroll.js"></script>
 	<script type="text/javascript" src="js/sthree.sidepanel.js"></script>
 </body>
 </html>

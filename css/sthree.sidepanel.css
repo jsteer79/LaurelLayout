@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+/* SidePanel Styles */
+
+.SidePanel {
+	position: absolute;
+	top: 80px;
+	bottom: 32px;
+	width: 400px;
+	z-index: 20;
+	display: none;
+	border: 1px solid #d9d9d9;
+	background: #fff;
+}
+
+.SidePanelRight {
+	right: 0;
+}
+
+.SidePanelLeft {
+	left: 0;
+}
+
+.SidePanel article {
+	margin: 0;
+	border: 0;
+}
+
+.SidePanel header {
+	position: absolute;
+	z-index: 21;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.SidePanel nav {
+	z-index: 22;
+	position: relative;
+}
+.SidePanel section {
+	position: absolute;
+	top: 31px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	padding: 4px;
+	overflow: auto;
+}
+
+.SidePanelButtonContainer {
+	z-index: 30;
+	position: absolute;
+}
+
+.SidePanelButtonContainer a {
+	text-decoration: none;
+	padding: 5px;
+	font-weight: bold;
+	background: yellow;
+	border: 1px double black;
+	display: block;
+}
+
+#SidePanelButtonContainerRight {
+	top: 150px; 
+	right: 0;
+}
+
+#SidePanelButtonContainerRight a {
+	border-right: 0;
+}
+
+#SidePanelButtonContainerLeft {
+	top: 150px; 
+	left: 0;
+}
+
+#SidePanelButtonContainerLeft a {
+	border-left: 0;
+}
