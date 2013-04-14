@@ -7,21 +7,22 @@
 								var $this        = $(this)
 								  , bInitialised = $this.data('Panel.Initialised');
 								if( !bInitialised ) {
-									$this.on('click.Panel', 'header', { target: $this }, methods.toggleBody );
+									$this.on('click.Panel', 'header', {}, function() { $this.Panel( 'toggleBody' ); } );
 									$this.data('Panel.Initialised',true);
 								}
 							  }
 							);
 		},
 		
-		toggleBody : function( oEvent ) {
-			var target = $('section', oEvent.data.target );
+		toggleBody : function() {
+			var $this = $(this)
+			  , target = $('section', this );
 			if( target.is( ':hidden' ) ) {
 				target.slideDown( { done: function() { 
-											var iCurrent = oEvent.data.target.parent().scrollTop()
+											var iCurrent = $this.parent().scrollTop()
 											  , iTarget  = target.position().top
-											  , iParent  = oEvent.data.target.parent().position().top;
-											oEvent.data.target.parent().scrollTop( iCurrent + ( iTarget - iParent ) );
+											  , iParent  = $this.parent().position().top;
+											$this.parent().scrollTop( iCurrent + ( iTarget - iParent ) );
 								  		  } 
 								  } );
 			} else {

@@ -9,7 +9,7 @@
 	
 	var methods = {
 		
-		init : function(options) {
+		init : function( options ) {
 			return this.each( function() {
 								var $this        = $(this)
 								  , bInitialised = $this.data('SidePanel.Initialised');
@@ -23,8 +23,15 @@
 										oContainer = $('<ul>').addClass( 'SidePanelButtonContainer' ).attr( 'id', 'SidePanelButtonContainer' + aOptions.position ).appendTo( 'body' );
 									}
 									
-									oButton.on('click.SidePanel', { target: $this, options: aOptions }, methods.toggleHidden );
+									oButton.on('click.SidePanel', {}, function() { $this.SidePanel('toggleHidden'); } );
 									$('<li>').append( oButton ).appendTo( oContainer );
+									
+									oNavButton = $('<a href="#" title="Hide">Hide</a>' );
+									oNavButton.on( 'click.AjaxPanel', {}, function() { $this.SidePanel('toggleHidden'); } );
+									$('<li>').append(oNavButton).appendTo( $('nav > ul', $this ) );
+									
+									$this.data('SidePanel', aOptions);
+									$this.data('SidePanel.Button', oButton );
 									$this.data('SidePanel.Initialised',true);
 								}
 							  }
@@ -32,16 +39,37 @@
 		},
 		
 		toggleHidden : function( oEvent ) {
-			var $this    = $(this)
-			  , oTarget  = oEvent.data.target
-			  , aOptions = oEvent.data.options;
-			if( oTarget.is( ':hidden' ) ) {
-				oTarget.show(400, function() { $this.html( aOptions.button_hide ).attr('title', aOptions.title_hide); } );
+			if( this.is( ':hidden' ) ) {
+				this.SidePanel('show');
 			} else {
-				oTarget.hide(400, function() { $this.html( aOptions.button_show ).attr('title', aOptions.title_show); } );
+				this.SidePanel('hide');
 			}
 			return false;
-		}
+		},
+		
+		show : function() {
+			var aOptions = this.data('SidePanel')
+			  , oButton  = this.data('SidePanel.Button');
+			
+			this.show(400, function() { 
+								oButton.html( aOptions.button_hide )
+									   .attr('title', aOptions.title_hide); 
+							  } 
+						);
+			return false;
+		},
+		
+		hide : function() {
+			var aOptions = this.data('SidePanel')
+			  , oButton  = this.data('SidePanel.Button');
+			
+			this.hide(400, function() { 
+								oButton.html( aOptions.button_show )
+								       .attr('title', aOptions.title_show); 
+							  } 
+						);
+			return false;
+		},		
 	};
 	
 	$.fn.SidePanel = function( method ) {

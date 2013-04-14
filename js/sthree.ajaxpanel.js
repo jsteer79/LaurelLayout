@@ -7,29 +7,27 @@
 								  , bInitialised = $this.data('AjaxPanel.Initialised');
 								if( !bInitialised ) {
 									var sAjaxSource = $this.data( 'ajax_source' );
-									if( sAjaxSource ) {
-										methods.doRefresh( $this, sAjaxSource );
-										$('nav > ul', $this ).append( '<li><a class="PanelRefresh" href="#" title="Refresh Panel">Refresh</a></li>' );
-										$this.on( 'click.AjaxPanel', '.PanelRefresh', { target: $this }, methods.refresh );
+									if( !sAjaxSource ) {
+										
+										
 									}
+									oButton = $('<a href="#" title="Refresh Panel">Refresh</a>' );
+									oButton.on( 'click.AjaxPanel', {}, function() { $this.AjaxPanel('refresh'); } );
+									$('<li>').append(oButton).appendTo( $('nav > ul', $this ) );
 									$this.data('AjaxPanel.Initialised',true);
+									$this.AjaxPanel('refresh');
 								}
 							  }
 							);
 		},
 		
-		refresh : function( oEvent ) {
-			$this = oEvent.data.target;
-			var sAjaxSource = $this.data( 'ajax_source' );
+		refresh : function() {
+			var sAjaxSource = this.data( 'ajax_source' );
 			if( sAjaxSource ) {
-				methods.doRefresh( $this, sAjaxSource );
+				$('section', this ).html( 'Loading...'  );
+				$('section', this ).load( sAjaxSource );
 			}
 			return false;
-		},
-		
-		doRefresh : function( oPanel, sUrl ) {
-			$('section', oPanel ).html( 'Loading...'  );
-			$('section', oPanel ).load( sUrl );
 		},
 	};
 	
