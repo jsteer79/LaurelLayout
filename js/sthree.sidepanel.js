@@ -1,10 +1,11 @@
 (function( $ ) {
 	
-	var defaults = { title_show  : 'Show'
-				   , title_hide  : 'Hide'
-				   , button_show : '«'
-				   , button_hide : '»'
-				   , position    : 'Right'
+	var defaults = { title_show        : 'Show'
+				   , title_hide        : 'Hide'
+				   , button_show       : '«'
+				   , button_hide       : '»'
+				   , position          : 'Right'
+				   , content_container : false
 				   };
 	
 	var methods = {
@@ -49,25 +50,41 @@
 		
 		show : function() {
 			var aOptions = this.data('SidePanel')
-			  , oButton  = this.data('SidePanel.Button');
+			  , oButton  = this.data('SidePanel.Button')
+			  , iWidth   = this.width();
 			
 			this.show(400, function() { 
 								oButton.html( aOptions.button_hide )
 									   .attr('title', aOptions.title_hide); 
 							  } 
 						);
+			if( aOptions.content_container ) {
+				if( aOptions.position == 'Right' ) {
+					$(aOptions.content_container).animate( { right  : '+=' + iWidth +'px' } );
+				} else {
+					$(aOptions.content_container).animate( { left  : '+=' + iWidth +'px' } );
+				}
+			}
 			return false;
 		},
 		
 		hide : function() {
 			var aOptions = this.data('SidePanel')
-			  , oButton  = this.data('SidePanel.Button');
+			  , oButton  = this.data('SidePanel.Button')
+			  , iWidth   = this.width();
 			
 			this.hide(400, function() { 
 								oButton.html( aOptions.button_show )
 								       .attr('title', aOptions.title_show); 
 							  } 
 						);
+			if( aOptions.content_container ) {
+				if( aOptions.position == 'Right' ) {
+					$(aOptions.content_container).animate( { right  : '-=' + iWidth +'px' } );
+				} else {
+					$(aOptions.content_container).animate( { left  : '-=' + iWidth +'px' } );
+				}
+			}
 			return false;
 		},		
 	};
