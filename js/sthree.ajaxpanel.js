@@ -25,7 +25,7 @@
 			var sAjaxSource = this.data( 'ajax_source' );
 			if( sAjaxSource ) {
 				$('section', this ).html( 'Loading...'  );
-				$('section', this ).load( sAjaxSource );
+				$('section', this ).load( sAjaxSource, function() { $('.Expandable').Expandable(); } );
 			}
 			return false;
 		},

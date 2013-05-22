@@ -1,7 +1,7 @@
 var fGetContent = function() {
 	var sContent = '';
 	$.ajax( { async		: false 
-		    , url 		: 'content.html'
+		    , url 		: 'ContactCommentary.php'
 		    , dataType	: 'html'
 		    , success	: function ( sData ) {
 		    				sContent = sData;
